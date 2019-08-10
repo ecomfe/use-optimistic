@@ -1,0 +1,41 @@
+{
+  "name": "use-optimistic",
+  "version": "1.0.0",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "sideEffects": false,
+  "repository": "git@github.com:ecomfe/use-optimistic.git",
+  "author": "otakustay <otakustay@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "cjs",
+    "es"
+  ],
+  "scripts": {
+    "build": "skr rollup --clean",
+    "lint": "skr lint",
+    "lint-staged": "npm run lint -- --staged",
+    "start": "skr dev --src=demo",
+    "test": "skr test --coverage",
+    "prepublishOnly": "npm run build",
+    "deploy": "npm publish --registry=https://registry.npmjs.com"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^2.0.1",
+    "classnames": "^2.2.6",
+    "husky": "^3.0.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-test-renderer": "^16.9.0",
+    "reskript": "^0.19.2",
+    "webpack": "^4.39.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "extends": "./node_modules/reskript/config/tsconfig.json",
+    "compilerOptions": {
+        "jsx": "preserve"
+    },
+    "include": ["src", "types"]
+}
